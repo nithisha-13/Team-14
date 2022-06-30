@@ -7,6 +7,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { AddInstituteComponent } from './modules/admin/institutes/add-institute/add-institute.component';
+import { AddinstituteComponent } from './modules/admin/institutes/addinstitute/addinstitute.component';
+import { ViewinstituteComponent } from './modules/user/institutes/viewinstitute/viewinstitute.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { SignupComponent } from './components/signup/signup.component';
     HeaderComponent,
     HomepageComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    AddInstituteComponent,
+    AddinstituteComponent,
+    ViewinstituteComponent
   ],
   imports: [
     BrowserModule,
