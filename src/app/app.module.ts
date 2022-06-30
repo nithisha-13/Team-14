@@ -7,7 +7,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { AddInstituteComponent } from './modules/admin/institutes/add-institute/add-institute.component';
 import { AddinstituteComponent } from './modules/admin/institutes/addinstitute/addinstitute.component';
 import { ViewinstituteComponent } from './modules/user/institutes/viewinstitute/viewinstitute.component';
 
@@ -18,15 +17,11 @@ import { ViewinstituteComponent } from './modules/user/institutes/viewinstitute/
     HomepageComponent,
     LoginComponent,
     SignupComponent,
-    AddInstituteComponent,
     AddinstituteComponent,
-    ViewinstituteComponent
+    ViewinstituteComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
