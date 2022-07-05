@@ -1,0 +1,58 @@
+<mat-card class="card">
+  <mat-card-title class="title">ADD INSTITUTE</mat-card-title>
+  <form class="forms" [formGroup]="instituteForm" (ngSubmit)="Add()">
+    <div class="field">
+      <input
+        class="input"
+        id="name"
+        type="text"
+        formControlName="name"
+        placeholder="Enter Institute Name"
+      />
+    </div>
+
+    <div class="field">
+      <input
+        class="input"
+        id="imageUrl"
+        type="url"
+        formControlName="imageUrl"
+        placeholder="Enter Image Url"
+      />
+    </div>
+
+    <div class="field">
+      <input
+        class="input"
+        id="location"
+        type="text"
+        formControlName="location"
+        placeholder="Enter Location"
+      />
+    </div>
+
+    <div class="field">
+      <input
+        class="input"
+        id="phone"
+        type="text"
+        formControlName="phone"
+        placeholder="Enter Institute Phone"
+      />
+    </div>
+
+    <div class="field">
+      <textarea
+        class="input"
+        id="description"
+        type="text"
+        fornControlName="description"
+        placeholder="Enter Description"
+      ></textarea>
+    </div>
+
+    <div>
+      <button class="btn btn-primary" type="submit">ADD INSTITUTE</button>
+    </div>
+  </form>
+</mat-card>
