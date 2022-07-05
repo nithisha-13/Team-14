@@ -14,6 +14,7 @@ import { AddCourseComponent } from './modules/admin/courses/add-course/add-cours
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { AddInstituteComponent } from './modules/admin/institutes/add-institute/add-institute.component';
+import { EditInstituteComponent } from './modules/admin/institutes/edit-institute/edit-institute.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -34,6 +35,7 @@ const routes: Routes = [
     EnrollCourseComponent,
     AddCourseComponent,
     AddInstituteComponent,
+    EditInstituteComponent,
   ],
   imports: [
     BrowserModule,
