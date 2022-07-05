@@ -1,1 +1,51 @@
-<p>signup works!</p>
+<mat-card class="card">
+  <mat-card-title class="title">SIGNUP</mat-card-title>
+  <form class="forms" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <select class="custom-select" formControlName="role">
+      <option *ngFor="let role of Roles" [ngValue]="role.id">
+        {{ role.value }}
+      </option>
+    </select>
+    <div class="field">
+      <input
+        class="input"
+        id="name"
+        type="text"
+        formControlName="name"
+        placeholder="Enter Username"
+      />
+    </div>
+
+    <div class="field">
+      <input
+        class="input"
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="Enter Email"
+      />
+    </div>
+
+    <div class="field">
+      <input
+        class="input"
+        id="phone"
+        type="phone"
+        formControlName="phone"
+        placeholder="Enter Phone Number"
+      />
+    </div>
+
+    <div class="field">
+      <input
+        class="input"
+        id="password"
+        type="password"
+        formControlName="password"
+        placeholder="Enter Password"
+      />
+    </div>
+
+    <button class="btn btn-primary" type="submit">SignUp</button>
+  </form>
+</mat-card>
