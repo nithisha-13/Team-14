@@ -1,6 +1,6 @@
 <mat-card class="card">
-    <mat-card-title class="title">ADD COURSE </mat-card-title>
-<form [formGroup] = 'addcourseForm'>
+    <mat-card-title class="title">EDIT COURSE </mat-card-title>
+<form [formGroup] = 'editcourseForm'>
     <div class="field">
         <input class="input" type="text" formControlName = "courseName" placeholder = "courseName">
     </div>
@@ -17,7 +17,7 @@
         <textarea class="input" type="text" formControlName = "description" placeholder = "Description"></textarea>
     </div>
     <div>
-        <button class="btn btn-success">AddCourse</button>
+        <button class="btn btn-success">Update Course</button>
     </div>
 </form>
 </mat-card>

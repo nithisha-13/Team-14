@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup,FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-add-course',
@@ -7,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCourseComponent implements OnInit {
 
+  addcourseForm = new FormGroup({
+    courseName : new FormControl (''),
+    courseDuration : new FormControl (''),
+    courseTiming : new FormControl (''),
+    noStudent : new FormControl (''),
+    discription : new FormControl (''),
+  });
   constructor() { }
 
   ngOnInit(): void {

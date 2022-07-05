@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { EnrollCourseComponent } from './components/enroll-course/enroll-course.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AddCourseComponent } from './modules/admin/courses/add-course/add-course.component';
+import { EditCourseComponent } from './modules/admin/courses/edit-course/edit-course.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -31,7 +32,8 @@ const routes: Routes = [
     AddinstituteComponent,
     ViewinstituteComponent,
     EnrollCourseComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    EditCourseComponent
   ],
   imports: [
     BrowserModule,
