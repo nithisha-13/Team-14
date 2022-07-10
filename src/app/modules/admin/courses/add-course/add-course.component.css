@@ -12,31 +12,36 @@
   
 .input 
 {
-    height: 35px;
-    width: 230px;
+    height: 3 rem;
+    width: 20rem;
 }
 
 .btn 
 {
-    margin-left: 130px;
+    margin-left: 11rem;
+    margin-top:2rem;
+    margin-bottom:1rem;
 }
 
 .card
 {
-    margin-top:8%;
-    margin-left:auto;
-    margin-right:auto;
-    width: 400px;
-    background-color:white;
+    width: 30rem;
+    margin-top: 12rem;
+    margin-left: 0rem;
+    margin-right: auto;
+    background-color:rgba(197, 206, 205, 0.825);
     position: absolute;
-    top: 22%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 20%;
+    left: 49%;
+    transform: translate(-45%, -45%);
 }
 
 .title {
-    padding-left: 115px;
-    padding-bottom: 12px;
+    padding-left: 9rem;
+    font-weight: 500;
+    font-size:x-large;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
   }
   .bg{
     width: 100%;

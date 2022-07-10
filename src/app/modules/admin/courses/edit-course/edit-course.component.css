@@ -7,22 +7,24 @@
   
 .input 
 {
-    height: 35px;
-    width: 230px;
+    height: 3 rem;
+    width: 20rem;
 }
 
 .btn 
 {
-    margin-left: 140px;
+    margin-left: 11rem;
+    margin-top:2rem;
+    margin-bottom:1rem;
 }
 
 .card
 {
-    width: 400px;
-    margin-top: 8%;
-    margin-left: auto;
+    width: 30rem;
+    margin-top: 12rem;
+    margin-left: 0rem;
     margin-right: auto;
-    background-color:white;
+    background-color:rgba(197, 206, 205, 0.825);
     position: absolute;
     top: 20%;
     left: 49%;
@@ -34,7 +36,8 @@
     /* padding-left: 133px; */
     font-weight: 500;
     font-size:x-large;
-    padding-bottom: 15px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 .bg{
     width: 100%;

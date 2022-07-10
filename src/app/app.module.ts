@@ -19,6 +19,10 @@ import { EditInstituteComponent } from './modules/admin/institutes/edit-institut
 import { EditCourseComponent } from './modules/admin/courses/edit-course/edit-course.component';
 import { AddStudentComponent } from './modules/admin/student/add-student/add-student.component';
 import { EditStudentComponent } from './modules/admin/student/edit-student/edit-student.component';
+import { CourseComponent } from './modules/admin/courses/course/course.component';
+import { CourseListComponent } from './modules/admin/courses/course/course-list/course-list.component';
+import { ViewCourseComponent } from './modules/admin/courses/course/course-list/view-course/view-course.component';
+import { CourseService } from './services/course.service';
 
 
 const routes: Routes = [
@@ -55,6 +59,9 @@ const routes: Routes = [
     EditCourseComponent,
     AddStudentComponent,
     EditStudentComponent,
+    CourseComponent,
+    CourseListComponent,
+    ViewCourseComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
@@ -65,7 +72,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [CourseService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

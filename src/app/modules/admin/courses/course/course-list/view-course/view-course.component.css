@@ -1,0 +1,22 @@
+.row {
+    display: inline-block;
+  }
+  
+.card
+{
+  width: 800px;
+  margin-top: 150px;
+  margin-left: 275px;
+  background-color: #e6e6e6;
+}
+
+.btn
+{
+  margin-top: 20px;
+  margin-left:340px;
+}
+
+.h3.h4{
+  margin-right : 100rem;
+
+}
