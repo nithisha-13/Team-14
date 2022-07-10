@@ -1,8 +1,13 @@
+*{
+    margin-top:auto;
+    margin-left:auto;
+    margin-right:auto;
+}
 .field 
 {
     height: 35px;
     margin-bottom: 15px;
-    margin-left: 65px;
+    margin-left: 10px;
 }
   
 .input 
@@ -18,14 +23,27 @@
 
 .card
 {
-    
+    margin-top:8%;
+    margin-left:auto;
+    margin-right:auto;
     width: 400px;
-    margin-top: 150px;
-    margin-left: 500px;
-    background-color:#e6e6e6;
+    background-color:white;
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .title {
-    padding-left: 135px;
-    padding-bottom: 10px;
+    padding-left: 115px;
+    padding-bottom: 12px;
   }
+  .bg{
+    width: 100%;
+    height:100%;
+    justify-content:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    
+}

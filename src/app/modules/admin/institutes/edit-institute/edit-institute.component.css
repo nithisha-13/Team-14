@@ -1,7 +1,8 @@
 .card {
   width: 400px;
-  margin-top: 150px;
-  margin-left: 500px;
+  margin-top: 8%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .field {
