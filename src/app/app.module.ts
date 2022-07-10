@@ -17,8 +17,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AddInstituteComponent } from './modules/admin/institutes/add-institute/add-institute.component';
 import { EditInstituteComponent } from './modules/admin/institutes/edit-institute/edit-institute.component';
 import { EditCourseComponent } from './modules/admin/courses/edit-course/edit-course.component';
-import { AddStudentComponent } from './modules/student/add-student/add-student.component';
-import { EditStudentComponent } from './modules/student/edit-student/edit-student.component';
+import { AddStudentComponent } from './modules/admin/student/add-student/add-student.component';
+import { EditStudentComponent } from './modules/admin/student/edit-student/edit-student.component';
 
 
 const routes: Routes = [
