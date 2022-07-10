@@ -15,12 +15,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { AddInstituteComponent } from './modules/admin/institutes/add-institute/add-institute.component';
 import { EditInstituteComponent } from './modules/admin/institutes/edit-institute/edit-institute.component';
+import { AddStudentComponent } from './modules/admin/student/add-student/add-student.component';
+import { EditStudentComponent } from './modules/admin/student/edit-student/edit-student.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'page-not-found', component: PageNotFoundComponent },
   { path: 'course', component: EnrollCourseComponent },
   { path: '**', redirectTo: 'page-not-found' },
+  { path: 'login', component: LoginComponent},
 ];
 
 @NgModule({
@@ -36,6 +39,8 @@ const routes: Routes = [
     AddCourseComponent,
     AddInstituteComponent,
     EditInstituteComponent,
+    AddStudentComponent,
+    EditStudentComponent,
   ],
   imports: [
     BrowserModule,
