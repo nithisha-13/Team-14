@@ -1,9 +1,10 @@
+<div class="bg"></div>
 <mat-card class="card">
-  <mat-card-title class="title">ADD INSTITUTE</mat-card-title>
+  <mat-card-title class="title"><u>ADD INSTITUTE</u></mat-card-title>
   <form class="forms" [formGroup]="instituteForm" (ngSubmit)="Add()">
     <div class="field">
       <input
-        class="input"
+        class="input form-control"
         id="name"
         type="text"
         formControlName="name"
@@ -13,7 +14,7 @@
 
     <div class="field">
       <input
-        class="input"
+        class="input form-control"
         id="imageUrl"
         type="url"
         formControlName="imageUrl"
@@ -23,7 +24,7 @@
 
     <div class="field">
       <input
-        class="input"
+        class="input form-control"
         id="location"
         type="text"
         formControlName="location"
@@ -33,7 +34,7 @@
 
     <div class="field">
       <input
-        class="input"
+        class="input form-control"
         id="phone"
         type="text"
         formControlName="phone"
@@ -43,7 +44,7 @@
 
     <div class="field">
       <textarea
-        class="input"
+        class="input form-control"
         id="description"
         type="text"
         fornControlName="description"
@@ -52,7 +53,7 @@
     </div>
 
     <div>
-      <button class="btn btn-primary" type="submit">ADD INSTITUTE</button>
+      <button class="btn btn-success" type="submit">Add Institute</button>
     </div>
   </form>
 </mat-card>

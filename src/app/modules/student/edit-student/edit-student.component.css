@@ -1,0 +1,70 @@
+.container {
+    background: linear-gradient(180deg, #6F7FBA 0%, rgba(111, 127, 186, 0.44) 33.33%, rgba(111, 127, 186, 0.33) 75%, rgba(111, 127, 186, 0.2) 100%);
+    position: absolute;
+    width: 70%;
+    height: 75%;
+    top: 15%;
+    left: 15%;
+    padding: 3%;
+    border-radius: 5px;
+  }
+
+  .form1 {
+    display: flex;
+  }
+  .form2 {
+    display: flex;
+  }
+  .form3 {
+    display: flex;
+  }
+  .form4 {
+    display: flex;
+  }
+  .form5 {
+    display: flex;
+  }
+
+  .form-group {
+    margin-left: 5%;
+    width: 30rem;
+    height: 3rem;
+  }
+  .form-groups{
+    width: 50rem;
+    height: 3rem;
+    margin-left: 7%;
+  }
+  .form-groupss {
+    width: 22rem;
+    height: 3rem;
+    
+  }
+
+  input{
+    color: blue;
+    width: 80%;
+    height: 80%;
+    border: 2px;
+    border-radius: 5%;
+  }
+
+  ::placeholder{
+    text-align: center;
+  }
+
+ .form-btn {
+    float: right;
+    
+ }
+ button{
+    height: 1.7rem;
+    width: 8rem;
+    border-radius: 5%;
+    background-color: rgb(84, 84, 230);
+    color: white;
+    border-color: black;
+ }
+ h2 {
+    text-align: center;
+ }

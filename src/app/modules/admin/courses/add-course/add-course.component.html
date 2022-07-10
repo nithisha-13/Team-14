@@ -1,23 +1,24 @@
+<div class="bg"></div>
 <mat-card class="card">
-    <mat-card-title class="title">ADD COURSE </mat-card-title>
-<form [formGroup] = 'addcourseForm'>
+    <mat-card-title class="title"><u>ADD COURSE</u></mat-card-title>
+    <form [formGroup] = 'addcourseForm'>
     <div class="field">
-        <input class="input" type="text" formControlName = "courseName" placeholder = "courseName">
+        <input class="input form-control" type="text" formControlName = "courseName" placeholder = "Course Name">
     </div>
     <div class="field">
-        <input class="input" type="text" formControlName = "courseDuration" placeholder = "courseDuration">
+        <input class="input form-control" type="text" formControlName = "courseDuration" placeholder = "Course Duration">
     </div>
     <div class="field">
-        <input class="input" type="text" formControlName = "courseTiming" placeholder = "courseTiming">
+        <input class="input form-control" type="text" formControlName = "courseTiming" placeholder = "Course Timing">
     </div>
     <div class="field">
-        <input class="input" type="text" formControlName = "noStudent" placeholder = "noOfStudent">
+        <input class="input form-control" type="text" formControlName = "noStudent" placeholder = "No of Students">
     </div>
     <div class="field">
-        <textarea class="input" type="text" formControlName = "description" placeholder = "Description"></textarea>
+        <textarea class="input form-control" type="text" formControlName = "description" placeholder = "Description"></textarea>
     </div>
     <div>
-        <button class="btn btn-success">AddCourse</button>
+        <button class="btn btn-success">Add Course</button>
     </div>
 </form>
 </mat-card>

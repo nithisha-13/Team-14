@@ -1,14 +1,15 @@
+<div class="bg"></div>
 <mat-card class="card">
-  <mat-card-title class="title">SIGNUP</mat-card-title>
+  <mat-card-title class="title ml-2">SIGN UP</mat-card-title>
   <form class="forms" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-    <select class="custom-select" formControlName="role">
+    <select class="custom-select field" formControlName="role">
       <option *ngFor="let role of Roles" [ngValue]="role.id">
         {{ role.value }}
       </option>
     </select>
     <div class="field">
       <input
-        class="input"
+        class="input form-control"
         id="name"
         type="text"
         formControlName="name"
@@ -18,7 +19,7 @@
 
     <div class="field">
       <input
-        class="input"
+        class="input form-control"
         id="email"
         type="email"
         formControlName="email"
@@ -28,7 +29,7 @@
 
     <div class="field">
       <input
-        class="input"
+        class="input form-control"
         id="phone"
         type="phone"
         formControlName="phone"
@@ -38,7 +39,7 @@
 
     <div class="field">
       <input
-        class="input"
+        class="input form-control"
         id="password"
         type="password"
         formControlName="password"
@@ -46,6 +47,6 @@
       />
     </div>
 
-    <button class="btn btn-primary" type="submit">SignUp</button>
+    <button class="btn btn-info" type="submit">SignUp</button>
   </form>
 </mat-card>

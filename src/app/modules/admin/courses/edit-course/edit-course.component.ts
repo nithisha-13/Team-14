@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder,FormControl,FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-course',
@@ -7,6 +7,7 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./edit-course.component.css']
 })
 export class EditCourseComponent implements OnInit {
+
   editcourseForm = this.formBuilder.group({
     courseName : '',
     courseDuration : '',
