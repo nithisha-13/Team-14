@@ -20,6 +20,7 @@ import { EditCourseComponent } from './modules/admin/courses/edit-course/edit-co
 import { AddStudentComponent } from './modules/admin/student/add-student/add-student.component';
 import { EditStudentComponent } from './modules/admin/student/edit-student/edit-student.component';
 
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'page-not-found', component: PageNotFoundComponent },
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path:'add-student',component: AddStudentComponent},
   { path:'edit-student',component: EditStudentComponent},
   { path: '**', redirectTo: 'page-not-found' },
+  { path: 'login', component: LoginComponent},
 ];
 
 @NgModule({
