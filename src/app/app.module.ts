@@ -22,12 +22,6 @@ import { CourseComponent } from './modules/admin/courses/course/course.component
 import { CourseListComponent } from './modules/admin/courses/course/course-list/course-list.component';
 import { ViewCourseComponent } from './modules/admin/courses/course/course-list/view-course/view-course.component';
 import { CourseService } from './services/course.service';
-<<<<<<< HEAD
-import { UserCourseComponent } from './modules/user/courses/user-course/user-course.component';
-import { ListUsercourseComponent } from './modules/user/courses/user-course/list-usercourse/list-usercourse.component';
-import { ViewUsercourseComponent } from './modules/user/courses/user-course/list-usercourse/view-usercourse/view-usercourse.component';
-
-=======
 import { InstituteService } from './services/institute.service';
 import { InstituteComponent } from './modules/user/institutes/institute/institute.component';
 import { InstituteListComponent } from './modules/user/institutes/institute/institute-list/institute-list.component';
@@ -37,7 +31,6 @@ import { ListAdminstituteComponent } from './modules/admin/institutes/institute-
 import { ViewAdminstituteComponent } from './modules/admin/institutes/institute-admin/list-adminstitute/view-adminstitute/view-adminstitute.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { MatIconModule } from '@angular/material/icon';
->>>>>>> 32b5017178654a8e2e132bf90952cb38bdb9ea25
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -76,19 +69,8 @@ const routes: Routes = [
     CourseComponent,
     CourseListComponent,
     ViewCourseComponent,
-<<<<<<< HEAD
-    UserCourseComponent,
-    ListUsercourseComponent,
-    ViewUsercourseComponent,
-=======
     InstituteComponent,
     InstituteListComponent,
-    ViewInstituteComponent,
-    InstituteAdminComponent,
-    ListAdminstituteComponent,
-    ViewAdminstituteComponent,
-    SearchbarComponent,
->>>>>>> 32b5017178654a8e2e132bf90952cb38bdb9ea25
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
