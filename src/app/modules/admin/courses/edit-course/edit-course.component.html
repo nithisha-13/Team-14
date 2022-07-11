@@ -1,24 +1,34 @@
 <div class="bg"></div>
 <div class="card">
     <div class="title text-center mt-3 mb-2">EDIT COURSE</div>
-    <form>
+    <form [formGroup] = 'editcourseForm'>
     <div class="field">
-        <input class="input form-control" type="text" formControlName = "courseName" placeholder = "Enter Course Name">
-    </div>
+        <input class="input form-control" [(ngModel)]="formData.courseName" type="text" formControlName = "courseName" placeholder = "Enter Course Name">
+        <small *ngIf="!editcourseForm.get('courseName').valid && editcourseForm.get('courseName').touched"
+            style="color:red;margin-left:2px">* Invalid Course Name</small>
+    </div><br>
     <div class="field">
-        <input class="input form-control" type="text" formControlName = "courseDuration" placeholder = "Enter Course Duration">
-    </div>
+        <input class="input form-control" [(ngModel)]="formData.courseDuration" type="text" formControlName = "courseDuration" placeholder = "Enter Course Duration">
+        <small *ngIf="!editcourseForm.get('courseDuration').valid && editcourseForm.get('courseDuration').touched"
+            style="color:red;margin-left:2px">* Invalid Course Duration</small>
+    </div><br>
     <div class="field">
-        <input class="input form-control" type="text" formControlName = "courseTiming" placeholder = "Enter Course Timing">
-    </div>
+        <input class="input form-control" [(ngModel)]="formData.courseTiming" type="text" formControlName = "courseTiming" placeholder = "Enter Course Timing">
+        <small *ngIf="!editcourseForm.get('courseTiming').valid && editcourseForm.get('courseTiming').touched"
+            style="color:red;margin-left:2px">* Invalid Course Timing</small>
+    </div><br>
     <div class="field">
-        <input class="input form-control" type="text" formControlName = "noStudent" placeholder = "Enter No of Students">
-    </div>
+        <input class="input form-control" [(ngModel)]="formData.noStudent" type="text" formControlName = "noStudent" placeholder = "Enter No of Students">
+        <small *ngIf="!editcourseForm.get('noStudent').valid && editcourseForm.get('noStudent').touched"
+            style="color:red;margin-left:2px">* Max students is 100</small>
+    </div><br>
     <div class="field">
-        <textarea class="input form-control" type="text" formControlName = "description" placeholder = "Enter Description"></textarea>
-    </div>
+        <textarea class="input form-control" [(ngModel)]="formData.description" type="text" formControlName = "description" placeholder = "Enter Description"></textarea>
+        <small *ngIf="!editcourseForm.get('description').valid && editcourseForm.get('description').touched"
+            style="color:red;margin-left:2px">* Exceeds 100 characters</small>
+    </div><br>
     <div>
-        <button class="btn btn-success">Update Course</button>
+        <button (click)="editCourse()" class="btn btn-success">Update Course</button>
         <div><br></div>
     </div>
 </form>

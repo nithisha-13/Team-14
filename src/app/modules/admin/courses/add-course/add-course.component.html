@@ -3,22 +3,32 @@
     <mat-card-title class="title">ADD COURSE</mat-card-title>
     <form [formGroup] = 'addcourseForm'>
     <div class="field">
-        <input class="input form-control" type="text" formControlName = "courseName" placeholder = "Enter Course Name">
-    </div>
+        <input class="input form-control" [(ngModel)]="formData.courseName" type="text" formControlName = "courseName" placeholder = "Enter Course Name">
+        <small *ngIf="!addcourseForm.get('courseName').valid && addcourseForm.get('courseName').touched"
+            style="color:red;margin-left:70px">* Invalid Course Name</small>
+    </div><br>
     <div class="field">
-        <input class="input form-control" type="text" formControlName = "courseDuration" placeholder = "Enter Course Duration">
-    </div>
+        <input class="input form-control" [(ngModel)]="formData.courseDuration" type="text" formControlName = "courseDuration" placeholder = "Enter Course Duration">
+        <small *ngIf="!addcourseForm.get('courseDuration').valid && addcourseForm.get('courseDuration').touched"
+            style="color:red;margin-left:70px">* Invalid Course Duration</small>
+    </div><br>
     <div class="field">
-        <input class="input form-control" type="text" formControlName = "courseTiming" placeholder = "Enter Course Timing">
-    </div>
+        <input class="input form-control" [(ngModel)]="formData.courseTiming" type="text" formControlName = "courseTiming" placeholder = "Enter Course Timing">
+        <small *ngIf="!addcourseForm.get('courseTiming').valid && addcourseForm.get('courseTiming').touched"
+            style="color:red;margin-left:70px">* Invalid Course Timing</small>
+    </div><br>
     <div class="field">
-        <input class="input form-control" type="text" formControlName = "noStudent" placeholder = "Enter No of Students">
-    </div>
+        <input class="input form-control" [(ngModel)]="formData.noStudent" type="text" formControlName = "noStudent" placeholder = "Enter No of Students">
+        <small *ngIf="!addcourseForm.get('noStudent').valid && addcourseForm.get('noStudent').touched"
+            style="color:red;margin-left:70px">* Invalid or Max students is 100 </small>
+    </div><br>
     <div class="field">
-        <textarea class="input form-control" type="text" formControlName = "description" placeholder = "Enter Description"></textarea>
-    </div>
+        <textarea class="input form-control" [(ngModel)]="formData.description" type="text" formControlName = "description" placeholder = "Enter Description"></textarea>
+        <small *ngIf="!addcourseForm.get('description').valid && addcourseForm.get('description').touched"
+            style="color:red;margin-left:70px">* Invalid or Exceeds 100 characters</small>
+    </div><br>
     <div>
-        <button class="btn btn-success">Add Course</button>
+        <button (click)="addCourse()" class="btn btn-success">Add Course</button>
     </div>
 </form>
 </mat-card>

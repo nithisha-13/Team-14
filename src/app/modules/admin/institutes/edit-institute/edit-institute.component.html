@@ -1,59 +1,74 @@
 <div class="bg"></div>
 <mat-card class="card">
   <mat-card-title class="title">EDIT INSTITUTE</mat-card-title>
-  <form class="forms" [formGroup]="instituteForm" (ngSubmit)="Edit()">
+  <form class="forms" [formGroup]="editinstituteForm">
     <div class="field">
       <input
+        [(ngModel)]="formData.name"
         class="input form-control"
         id="name"
         type="text"
         formControlName="name"
         placeholder="Enter Institute Name"
       />
-    </div>
+      <small *ngIf="!editinstituteForm.get('name').valid && editinstituteForm.get('name').touched"
+            style="color:red;margin-left:65px">* Invalid Institute Name</small>
+    </div><br>
 
     <div class="field">
       <input
+      [(ngModel)]="formData.imageUrl"
         class="input form-control"
         id="imageUrl"
         type="url"
         formControlName="imageUrl"
         placeholder="Enter Image Url"
       />
-    </div>
+      <small *ngIf="!editinstituteForm.get('imageUrl').valid && editinstituteForm.get('imageUrl').touched"
+            style="color:red;margin-left:65px">* Invalid Image URL</small>
+    </div><br>
 
     <div class="field">
       <input
+      [(ngModel)]="formData.location"
         class="input form-control"
         id="location"
         type="text"
         formControlName="location"
         placeholder="Enter Location"
       />
-    </div>
+      <small *ngIf="!editinstituteForm.get('location').valid && editinstituteForm.get('location').touched"
+            style="color:red;margin-left:65px">* Invalid Location</small>
+    </div><br>
 
     <div class="field">
       <input
+      [(ngModel)]="formData.phone"
         class="input form-control"
         id="phone"
         type="text"
         formControlName="phone"
         placeholder="Enter Institute Phone"
       />
-    </div>
+      <small *ngIf="!editinstituteForm.get('phone').valid && editinstituteForm.get('phone').touched"
+            style="color:red;margin-left:65px">* Invalid Phone number</small>
+    </div><br>
 
     <div class="field">
       <textarea
+      [(ngModel)]="formData.description"
         class="input form-control"
         id="description"
         type="text"
-        fornControlName="description"
+        formControlName="description"
         placeholder="Enter Description"
       ></textarea>
-    </div>
+      <small *ngIf="!editinstituteForm.get('description').valid && editinstituteForm.get('description').touched"
+            style="color:red;margin-left:65px">* Invalid Description</small>
+    </div><br>
 
     <div>
-      <button class="btn btn-primary" type="submit">EDIT INSTITUTE</button>
+      <button (click)="editInst()" class="btn btn-primary" type="submit">EDIT INSTITUTE</button>
     </div>
   </form>
 </mat-card>

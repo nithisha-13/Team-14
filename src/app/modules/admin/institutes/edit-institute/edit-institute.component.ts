@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { EditInstitutePayLoad } from './edit-institute.payload';
 
 @Component({
   selector: 'app-edit-institute',
@@ -7,16 +8,29 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./edit-institute.component.css'],
 })
 export class EditInstituteComponent implements OnInit {
-  instituteForm = this.formBuilder.group({
-    name: '',
-    imageUrl: '',
-    phone: '',
-    email: '',
-    location: '',
-    description: '',
-  });
-  constructor(private formBuilder: FormBuilder) {}
+  formData:any={};
+  editinstituteForm:FormGroup;
+  editinstitutepayload:EditInstitutePayLoad;
+  constructor(private formbuilder:FormBuilder) { 
+    this.editinstitutepayload={
+      name:'',
+      imageUrl:'',
+      location:'',
+      phone:'',
+      description:'',
+    }
+  }
 
-  ngOnInit(): void {}
-  Edit() {}
+  ngOnInit(): void {
+    this.editinstituteForm = new FormGroup({
+      name: new FormControl('', [Validators.required,Validators.pattern('^[A-Z+a-z ]{2,40}$')]),
+      imageUrl: new FormControl('', [Validators.required]),
+      location: new FormControl('', [Validators.required,Validators.pattern("[a-zA-Z ]{1,20}")]),
+      phone:new FormControl('', [Validators.required,Validators.pattern("[0-9]{10}")]),
+      description: new FormControl('', [Validators.required,Validators.pattern("[a-zA-Z0-9]{2,100}")]),
+    });
+  }
+  editInst() {
+    console.log(this.formData);
+  }
 }
