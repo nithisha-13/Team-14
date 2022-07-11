@@ -1,0 +1,29 @@
+<mat-card class="card">
+  <div class="row">
+    <div class="col justify-content-center" *ngIf="institute">
+      <div>
+        <img
+          class="alignment"
+          [src]="institute.imageUrl"
+          [alt]="institute.name"
+          style="width: 350px; height: 130px"
+        />
+      </div>
+      <br />
+      <div class="text-center">
+        <h3>
+          <strong>{{ institute.name | uppercase }}</strong>
+        </h3>
+        <div>
+          <button
+            class="btn btn-success btn-sm edit"
+            routerLink="/editInstitute"
+          >
+            Edit Institute
+          </button>
+          <mat-icon class="delete">delete</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>

@@ -5,7 +5,6 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ViewinstituteComponent } from './modules/user/institutes/viewinstitute/viewinstitute.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { EnrollCourseComponent } from './modules/user/enroll-course/enroll-course.component';
@@ -23,26 +22,39 @@ import { CourseComponent } from './modules/admin/courses/course/course.component
 import { CourseListComponent } from './modules/admin/courses/course/course-list/course-list.component';
 import { ViewCourseComponent } from './modules/admin/courses/course/course-list/view-course/view-course.component';
 import { CourseService } from './services/course.service';
+<<<<<<< HEAD
 import { UserCourseComponent } from './modules/user/courses/user-course/user-course.component';
 import { ListUsercourseComponent } from './modules/user/courses/user-course/list-usercourse/list-usercourse.component';
 import { ViewUsercourseComponent } from './modules/user/courses/user-course/list-usercourse/view-usercourse/view-usercourse.component';
 
+=======
+import { InstituteService } from './services/institute.service';
+import { InstituteComponent } from './modules/user/institutes/institute/institute.component';
+import { InstituteListComponent } from './modules/user/institutes/institute/institute-list/institute-list.component';
+import { ViewInstituteComponent } from './modules/user/institutes/institute/institute-list/view-institute/view-institute.component';
+import { InstituteAdminComponent } from './modules/admin/institutes/institute-admin/institute-admin.component';
+import { ListAdminstituteComponent } from './modules/admin/institutes/institute-admin/list-adminstitute/list-adminstitute.component';
+import { ViewAdminstituteComponent } from './modules/admin/institutes/institute-admin/list-adminstitute/view-adminstitute/view-adminstitute.component';
+import { SearchbarComponent } from './components/searchbar/searchbar.component';
+import { MatIconModule } from '@angular/material/icon';
+>>>>>>> 32b5017178654a8e2e132bf90952cb38bdb9ea25
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'page-not-found', component: PageNotFoundComponent },
-  { path: 'course', component: EnrollCourseComponent },
+  { path: 'enrollCourse', component: EnrollCourseComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
-  { path:'add-course',component: AddCourseComponent},
-  { path:'edit-course',component: EditCourseComponent},
-  { path: 'add-institute', component:AddInstituteComponent},
-  { path: 'edit-institute', component:EditInstituteComponent},
-  { path: 'view-institute', component:ViewinstituteComponent},
-  { path:'add-student',component: AddStudentComponent},
-  { path:'edit-student',component: EditStudentComponent},
+  { path: 'institute', component: InstituteComponent },
+  { path: 'course', component: CourseComponent },
+  { path: 'add-course', component: AddCourseComponent },
+  { path: 'edit-course', component: EditCourseComponent },
+  { path: 'add-institute', component: AddInstituteComponent },
+  { path: 'edit-institute', component: EditInstituteComponent },
+  { path: 'add-student', component: AddStudentComponent },
+  { path: 'edit-student', component: EditStudentComponent },
   { path: '**', redirectTo: 'page-not-found' },
-  { path: 'login', component: LoginComponent},
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({
@@ -54,7 +66,6 @@ const routes: Routes = [
     HomeComponent,
     SignupComponent,
     PageNotFoundComponent,
-    ViewinstituteComponent,
     EnrollCourseComponent,
     AddCourseComponent,
     AddInstituteComponent,
@@ -65,9 +76,19 @@ const routes: Routes = [
     CourseComponent,
     CourseListComponent,
     ViewCourseComponent,
+<<<<<<< HEAD
     UserCourseComponent,
     ListUsercourseComponent,
     ViewUsercourseComponent,
+=======
+    InstituteComponent,
+    InstituteListComponent,
+    ViewInstituteComponent,
+    InstituteAdminComponent,
+    ListAdminstituteComponent,
+    ViewAdminstituteComponent,
+    SearchbarComponent,
+>>>>>>> 32b5017178654a8e2e132bf90952cb38bdb9ea25
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
@@ -75,10 +96,11 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     FormsModule,
     MatCardModule,
+    MatIconModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [CourseService],
+  providers: [CourseService, InstituteService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
