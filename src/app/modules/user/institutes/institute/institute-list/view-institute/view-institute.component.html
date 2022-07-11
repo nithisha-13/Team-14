@@ -1,0 +1,30 @@
+<mat-card class="card">
+  <div class="row">
+    <div class="col justify-content-center" *ngIf="institute">
+      <div>
+        <img
+          class="alignment"
+          [src]="institute.imageUrl"
+          [alt]="institute.name"
+          style="width: 350px; height: 120px"
+        />
+      </div>
+      <div class="field text-center">
+        <h4>
+          <strong>{{ institute.name | uppercase }}</strong>
+        </h4>
+        <h5>{{ institute.email }} , {{ institute.phone }}</h5>
+        <h5>{{ institute.location }}</h5>
+        <div>
+          <a
+            class="btn btn-success btn-sm"
+            (click)="onSelectItem()"
+            routerLink="/course"
+          >
+            View Course
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>

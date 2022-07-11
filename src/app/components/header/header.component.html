@@ -1,18 +1,30 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/" style="margin-left:1%">Admission Portal</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" routerLink="/" style="margin-left: 1%"
+      >Admission Portal</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link"  routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-        <a class="nav-item nav-link" routerLink="add-course">Add Course</a>
-        <a class="nav-item nav-link" routerLink="edit-course">Edit Course</a>
-        <a class="nav-item nav-link" routerLink="course">Enroll Course</a>
-        <a class="nav-item nav-link" routerLink="add-institute">Add Institute</a>
-        <a class="nav-item nav-link" routerLink="add-student">Add Student</a>
-        <a class="nav-item nav-link" routerLink="edit-student">Edit Student</a>
+        <a
+          class="nav-item nav-link"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
+        <a class="nav-item nav-link" routerLink="institute">Institute</a>
+        <a class="nav-item nav-link" href="#">Student</a>
       </div>
     </div>
   </div>
