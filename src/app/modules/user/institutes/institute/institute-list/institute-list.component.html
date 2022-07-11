@@ -1,0 +1,9 @@
+<app-searchbar></app-searchbar>
+<div class="row">
+  <div class="col-md-12">
+    <app-view-institute
+      [institute]="instituteElement"
+      *ngFor="let instituteElement of institutes"
+    ></app-view-institute>
+  </div>
+</div>

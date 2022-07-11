@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col">
+    <div class="input-group-text">
+      <app-searchbar class="search"></app-searchbar>
+      <button class="btn btn-success" routerLink="/add-institute">
+        Add Institute
+      </button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <app-view-adminstitute
+      [institute]="instituteElement"
+      *ngFor="let instituteElement of institutes"
+    ></app-view-adminstitute>
+  </div>
+</div>

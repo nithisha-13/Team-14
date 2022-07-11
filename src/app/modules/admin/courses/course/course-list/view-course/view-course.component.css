@@ -1,0 +1,28 @@
+.row {
+    display: inline-block;
+  }
+  
+.card
+{ 
+  display:inline-block;
+  width: 400px;
+  margin-top: 150px;
+  margin-left: 35px;
+  background-color: #e6e6e6;
+}
+
+.edit
+{ 
+  width:120px;
+  margin-left:3rem;
+  margin-right:2rem;
+}
+
+.del
+{
+  margin-right:3rem;
+}
+
+h4{
+  margin-right: 2rem;
+}
