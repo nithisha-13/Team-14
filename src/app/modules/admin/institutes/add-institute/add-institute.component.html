@@ -56,11 +56,11 @@
 
     <div class="field">
       <textarea
-      [(ngModel)]="formData.description"
+        [(ngModel)]="formData.description"
         class="input form-control"
         id="description"
         type="text"
-        fornControlName="description"
+        formControlName="description"
         placeholder="Enter Description"></textarea>
       <small *ngIf="!instituteForm.get('description').valid && instituteForm.get('description').touched"
             style="color:red;margin-left:2px">* Invalid Description</small>

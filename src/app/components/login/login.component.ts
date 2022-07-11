@@ -14,14 +14,14 @@ export class LoginComponent implements OnInit {
   loginpayload:LoginPayLoad;
   constructor(private formbuilder:FormBuilder) { 
     this.loginpayload={
-      userName:'',
+      email:'',
       password:'',
     }
   }
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
-      userName : new FormControl('', [Validators.required, Validators.email,
+      email : new FormControl('', [Validators.required, Validators.email,
         Validators.pattern('^([a-zA-Z]+.*?)+@[a-z0-9.-]+\.[a-z]{2,4}$')]),
       password : new FormControl('', [Validators.required,
         Validators.pattern('^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+*!=]).*$') ]),

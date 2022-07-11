@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Signup } from './signup';
 import { SignupPayload } from './signup.payload';
 
 @Component({
@@ -10,10 +9,10 @@ import { SignupPayload } from './signup.payload';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-  // Roles = [
-  //   { id: 1, value: 'Admin' },
-  //   { id: 2, value: 'User' },
-  // ];
+  Roles = [
+    { id: 1, value: 'Admin' },
+    { id: 2, value: 'User' },
+  ];
   registerForm:FormGroup;
   signuppayload:SignupPayload;
   formData:any={};
@@ -42,15 +41,10 @@ export class SignupComponent implements OnInit {
       password : new FormControl('', [Validators.required, Validators.minLength(8),Validators.maxLength(16),Validators.pattern('^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+*!=]).*$')]),
     });
   }
-  onSubmit(e){
-    this.signuppayload.name= this.registerForm.get('name').value;
-    this.signuppayload.email= this.registerForm.get('email').value;
-    this.signuppayload.phone= this.registerForm.get('phone').value;
-    this.signuppayload.password= this.registerForm.get('password').value;
-    alert('Registered Successfully!');
-    this.router.navigate(["/login"]);
-  }
+
   signUp(){
     console.log(this.formData);
+    alert('Registered Successfully!');
+    this.router.navigate(["/login"]);
   }
 }

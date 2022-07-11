@@ -1,77 +1,119 @@
 <body>
     <div class="container">
-    <form>
+    <form [formGroup]="editstudentForm"> 
       <h2 >Edit Student</h2>
       <div class="form1">
        <div class="form-group">
-       <input type="text" name="FirstName" id="FirstName" placeholder="Enter your First Name" minlength="3" required>
-       </div>
+       <input type="text" [(ngModel)]="formData.firstName" formControlName="firstName" name="FirstName" id="FirstName" placeholder="Enter your First Name" minlength="3" required>
+       <br>
+       <small *ngIf="!editstudentForm.get('firstName').valid && editstudentForm.get('firstName').touched"
+       style="color:red;">* Invalid First Name</small> 
+      </div>
 
        <div class="form-group">
-       <input type="text" name="LastName" id="LastName" placeholder="Enter your Last Name" required>
-       </div>
+       <input type="text" [(ngModel)]="formData.lastName" formControlName="lastName" name="LastName" id="LastName" placeholder="Enter your Last Name" required>
+       <br>
+       <small *ngIf="!editstudentForm.get('lastName').valid && editstudentForm.get('lastName').touched"
+       style="color:red;">* Invalid Last Name</small>  
+      </div>
 
        <div class="form-group">
-       <input type="text" name="Male/Female" id="Male/Female" placeholder="Enter your gender" required>
-       </div>
+       <input type="text" [(ngModel)]="formData.maleOrFemale" formControlName="maleOrFemale" name="Male/Female" id="Male/Female" placeholder="Enter your gender" required>
+       <br>
+       <small *ngIf="!editstudentForm.get('maleOrFemale').valid && editstudentForm.get('maleOrFemale').touched"
+       style="color:red;">* Invalid Gender</small>  
+      </div>
       </div>
 
 
       <div class="form2">
         <div class="form-group">
-        <input type="text" name="FatherName" id="FatherName" placeholder="Enter your Father Name" required>
-        </div>
+        <input type="text" [(ngModel)]="formData.fatherName" formControlName="fatherName" name="FatherName" id="FatherName" placeholder="Enter your Father Name" required>
+        <br>
+        <small *ngIf="!editstudentForm.get('fatherName').valid && editstudentForm.get('fatherName').touched"
+        style="color:red;">* Invalid Father Name</small>  
+      </div>
 
         <div class="form-group">
-        <input  name="PhoneNumber" id="PhoneNumber" placeholder="Enter Phone Number" pattern=".{10}" required>
-        </div>
+        <input [(ngModel)]="formData.phoneNumber" formControlName="phoneNumber" name="PhoneNumber" id="PhoneNumber" placeholder="Enter Phone Number" pattern=".{10}" required>
+        <br>
+        <small *ngIf="!editstudentForm.get('phoneNumber').valid && editstudentForm.get('phoneNumber').touched"
+        style="color:red;">* Invalid Phone Number</small>  
+      </div>
 
         <div class="form-group">
-        <input type="tel" name="AlternateNumber" id="AlternateNumber" placeholder="Enter Alternate Number" pattern=".{10}" required>
-        </div>
+        <input type="tel" [(ngModel)]="formData.alternateNumber" formControlName="alternateNumber" name="AlternateNumber" id="AlternateNumber" placeholder="Enter Alternate Number" pattern=".{10}" required>
+        <br>
+        <small *ngIf="!editstudentForm.get('alternateNumber').valid && editstudentForm.get('alternateNumber').touched"
+        style="color:red;">* Invalid Phone Number</small>  
+      </div>
       </div>
 
 
       <div class="form3">
         <div class="form-group">
-        <input type="text" name="MotherName" id="MotherName" placeholder="Enter your Mother Name" required>
-        </div>
+        <input type="text" [(ngModel)]="formData.motherName" formControlName="motherName" name="MotherName" id="MotherName" placeholder="Enter your Mother Name" required>
+        <br>
+        <small *ngIf="!editstudentForm.get('motherName').valid && editstudentForm.get('motherName').touched"
+        style="color:red;">* Invalid Mother Name</small>  
+      </div>
 
         <div class="form-group">
-        <input type="email" name="Email" id="Email" placeholder="Enter your Email-id" required>
-        </div>
+        <input type="email" [(ngModel)]="formData.email" formControlName="email" name="Email" id="Email" placeholder="Enter your Email-id" required>
+        <br>
+        <small *ngIf="!editstudentForm.get('email').valid && editstudentForm.get('email').touched"
+        style="color:red;">* Invalid Email ID</small>  
+      </div>
 
         <div class="form-group">
-        <input type="number" name="Age" id="Age" placeholder="Enter your age" required>
-        </div>
+        <input type="number" [(ngModel)]="formData.age" formControlName="age" name="Age" id="Age" placeholder="Enter your age" required>
+        <br>
+        <small *ngIf="!editstudentForm.get('age').valid && editstudentForm.get('age').touched"
+        style="color:red;">* Invalid Age (Max 70)</small>  
+      </div>
       </div>
 
       <div class="form4">
-        <div class="form-groups">
-         <input type="text" name="Address" id="Address" placeholder="Enter your Address" required>
+        <div class="form-group">
+         <input type="text" [(ngModel)]="formData.address" formControlName="address" name="Address" id="Address" placeholder="Enter your Address" required>
+         <br>
+         <small *ngIf="!editstudentForm.get('address').valid && editstudentForm.get('address').touched"
+         style="color:red;">* Invalid Address</small>
         </div>
 
-        <div class="form-groupss">
-          <input type="text" name="City" id="City" placeholder="Enter your City" required>
+        <div class="form-group">
+          <input type="text" [(ngModel)]="formData.city" formControlName="city" name="City" id="City" placeholder="Enter your City" required>
+          <br>
+          <small *ngIf="!editstudentForm.get('city').valid && editstudentForm.get('city').touched"
+            style="color:red;">* Invalid City</small>
         </div>
       </div>
 
       <div class="form5">
         <div class="form-group">
-        <input  name="Pincode" id="Pincode" placeholder="Enter your Pincode" minlength="6" required>
-        </div>
+        <input  name="Pincode" [(ngModel)]="formData.pincode" formControlName="pincode" id="Pincode" placeholder="Enter your Pincode" minlength="6" required>
+        <br>
+        <small *ngIf="!editstudentForm.get('pincode').valid && editstudentForm.get('pincode').touched"
+        style="color:red;">* Invalid Pincode</small>  
+      </div>
 
         <div class="form-group">
-        <input type="text" name="State" id="State" placeholder="Enter your State" required>
-        </div>
+        <input type="text" [(ngModel)]="formData.state" formControlName="state" name="State" id="State" placeholder="Enter your State" required>
+        <br>
+        <small *ngIf="!editstudentForm.get('state').valid && editstudentForm.get('state').touched"
+        style="color:red;">* Invalid State</small>  
+      </div>
 
         <div class="form-group">
-        <input type="text" name="Nationality" id="Nationality" placeholder="Enter your Nationality" required>
-        </div>
+        <input type="text" [(ngModel)]="formData.nationality" formControlName="nationality" name="Nationality" id="Nationality" placeholder="Enter your Nationality" required>
+        <br>
+        <small *ngIf="!editstudentForm.get('nationality').valid && editstudentForm.get('nationality').touched"
+        style="color:red;">* Invalid Nationality</small>  
+      </div>
       </div>
 
       <div class="form-btn">
-         <button>Update Student</button>
+         <button (click)="editStudent()">Update Student</button>
       </div>
     </form>
   </div>  

@@ -1,4 +1,4 @@
 export class LoginPayLoad{
-    userName!:string;
+    email!:string;
     password!:string;
 }    
