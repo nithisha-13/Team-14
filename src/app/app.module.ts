@@ -31,6 +31,7 @@ import { ListAdminstituteComponent } from './modules/admin/institutes/institute-
 import { ViewAdminstituteComponent } from './modules/admin/institutes/institute-admin/list-adminstitute/view-adminstitute/view-adminstitute.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { MatIconModule } from '@angular/material/icon';
+import { UserCourseComponent } from './modules/user/courses/user-course/user-course.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -40,7 +41,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'user-institute', component: InstituteComponent },
   { path: 'admin-institute', component: InstituteAdminComponent },
-  { path: 'course', component: CourseComponent },
+  { path: 'admin-course', component: CourseComponent },
+  { path: 'user-course', component: UserCourseComponent },
   { path: 'add-course', component: AddCourseComponent },
   { path: 'edit-course', component: EditCourseComponent },
   { path: 'add-institute', component: AddInstituteComponent },
@@ -75,6 +77,7 @@ const routes: Routes = [
     CourseComponent,
     CourseListComponent,
     ViewCourseComponent,
+    UserCourseComponent,
     InstituteComponent,
     InstituteListComponent,
   ],
