@@ -1,16 +1,44 @@
 <mat-card class="card">
     <div class="row">
-        <div  class="col-md-12 justify-content-center" *ngIf="course">
-           <div class="text-center">
-              <h3 style="text-align:left;float:left;">Course name : </h3> <h4 style="text-align:right;float:right;">{{course.courseName}}</h4><hr style="clear:both;"/>
-              <h3 style="text-align:left;float:left;">Course Duration : </h3> <h4 style="text-align:right;float:right;">{{course.courseDuration}}</h4><hr style="clear:both;"/>
-              <h3 style="text-align:left;float:left;">Course Timing : </h3> <h4 style="text-align:right;float:right;">{{course.courseTiming}}</h4><hr style="clear:both;"/>
-              <h3 style="text-align:left;float:left;">No Of Students : </h3> <h4 style="text-align:right;float:right;">{{course.noStudent}}</h4><hr style="clear:both;"/>
-              <h3 style="text-align:left;float:left;">Course Discription : </h3> <h4 style="text-align:right;float:right;">{{course.courseDis}}</h4><hr style="clear:both;"/>
-            </div>
-            <div>
-                <button class="btn btn-success btn-sm">Enroll Course</button>
-            </div>
+      <div class="col-md-12 justify-content-center" *ngIf="course">
+        <div class="text-center">
+          <h3 style="text-align: left; float: left">
+            <strong>Course name : </strong>
+          </h3>
+          <h4 style="text-align: right; float: right">{{ course.courseName }}</h4>
+          <hr style="clear: both" />
+          <h3 style="text-align: left; float: left">
+            <strong> Duration : </strong>
+          </h3>
+          <h4 style="text-align: right; float: right">
+            {{ course.courseDuration }}
+          </h4>
+          <hr style="clear: both" />
+          <h3 style="text-align: left; float: left">
+            <strong>Course Timing : </strong>
+          </h3>
+          <h4 style="text-align: right; float: right">
+            {{ course.courseTiming }}
+          </h4>
+          <hr style="clear: both" />
+          <h3 style="text-align: left; float: left">
+            <strong>No Of Students : </strong>
+          </h3>
+          <h4 style="text-align: right; float: right">{{ course.noStudent }}</h4>
+          <hr style="clear: both" />
+          <h3 style="text-align: center; float: center">
+            <strong>Description : </strong>
+          </h3>
+          <h4 style="text-align: right; float: right">{{ course.courseDis }}</h4>
+          <hr style="clear: both" />
         </div>
+        <div>
+          <button class="btn btn-success btn-sm " routerLink="/enrollCourse">
+            Enroll Course
+          </button>
+          
+        </div>
+      </div>
     </div>
-</mat-card>
+  </mat-card>
+  
