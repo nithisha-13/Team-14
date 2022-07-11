@@ -15,7 +15,7 @@
         <br>
         <small *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched" class="text-danger">* Invalid Password</small>
       </div>
-      <button (click)="loginFunc()">login</button>
+      <button (click)="loginFunc()" routerLink="/admin-institute">login</button>
       
       <p>New user? <a href="" routerLink="/signup">Sign-in</a></p>
       <p>Forgot Password<a href="#">Click here</a></p>
