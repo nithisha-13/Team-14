@@ -35,7 +35,6 @@ import { UserCourseComponent } from './modules/user/courses/user-course/user-cou
 import { ViewUsercourseComponent } from './modules/user/courses/user-course/list-usercourse/view-usercourse/view-usercourse.component';
 import { ListUsercourseComponent } from './modules/user/courses/user-course/list-usercourse/list-usercourse.component';
 
-
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'page-not-found', component: PageNotFoundComponent },
@@ -45,7 +44,7 @@ const routes: Routes = [
   { path: 'user-institute', component: InstituteComponent },
   { path: 'admin-institute', component: InstituteAdminComponent },
   { path: 'admin-course', component: CourseComponent },
-  { path: 'user-course', component: UserCourseComponent },
+  { path: 'course', component: UserCourseComponent },
   { path: 'add-course', component: AddCourseComponent },
   { path: 'edit-course', component: EditCourseComponent },
   { path: 'add-institute', component: AddInstituteComponent },

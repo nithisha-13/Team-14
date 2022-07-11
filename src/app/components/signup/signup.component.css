@@ -11,6 +11,7 @@
   margin-left: 500px;
   position: absolute;
   top: 22%;
+  background-color: rgba(197, 206, 205, 0.825);
   left: 25%;
   transform: translate(-50%, -50%);
 }
@@ -25,9 +26,9 @@
   height: 35px;
   width: 230px;
 }
-#submit{
-  margin-left:230px;
-  width:100px;
+#submit {
+  margin-left: 230px;
+  width: 100px;
 }
 .title {
   padding-left: 130px;
@@ -37,12 +38,11 @@
 .btn {
   margin-left: 150px;
 }
-.bg{
+.bg {
   width: 100%;
-  height:100%;
-  justify-content:center;
+  height: 100%;
+  justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image:url('pexels-tirachard-kumtanom-733857.jpg');
-  
+  background-image: url("pexels-tirachard-kumtanom-733857.jpg");
 }

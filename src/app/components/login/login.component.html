@@ -1,26 +1,51 @@
 <body>
-    <form [formGroup]="loginForm">
-      <div class="container">
-      <h2>
-        LOGIN
-      </h2>
+  <form [formGroup]="loginForm">
+    <div class="container">
+      <h2>LOGIN</h2>
       <div class="form-group">
-        <input formControlName="email" [(ngModel)]="formData.email" type="email" name="Email" id="Email" placeholder="Enter Email-id"  required>
-        <br>
-        <small *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched" class="text-danger">* Invalid Email ID</small> 
+        <input
+          formControlName="email"
+          [(ngModel)]="formData.email"
+          type="email"
+          name="Email"
+          id="Email"
+          placeholder="Enter Email-id"
+          required
+        />
+        <br />
+        <small
+          *ngIf="
+            !loginForm.get('email').valid && loginForm.get('email').touched
+          "
+          class="text-danger"
+          >* Invalid Email ID</small
+        >
       </div>
-  
+
       <div class="form-group">
-        <input formControlName="password" [(ngModel)] = "formData.password" type="password" name="Password" id="Password" placeholder="Enter your Password" required>
-        <br>
-        <small *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched" class="text-danger">* Invalid Password</small>
+        <input
+          formControlName="password"
+          [(ngModel)]="formData.password"
+          type="password"
+          name="Password"
+          id="Password"
+          placeholder="Enter your Password"
+          required
+        />
+        <br />
+        <small
+          *ngIf="
+            !loginForm.get('password').valid &&
+            loginForm.get('password').touched
+          "
+          class="text-danger"
+          >* Invalid Password</small
+        >
       </div>
       <button (click)="loginFunc()" routerLink="/admin-institute">login</button>
-      
+
       <p>New user? <a href="" routerLink="/signup">Sign-in</a></p>
       <p>Forgot Password<a href="#">Click here</a></p>
-  
-      </div>
-      
-    </form>
-  </body>
+    </div>
+  </form>
+</body>
