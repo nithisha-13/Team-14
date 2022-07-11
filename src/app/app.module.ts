@@ -23,6 +23,9 @@ import { CourseComponent } from './modules/admin/courses/course/course.component
 import { CourseListComponent } from './modules/admin/courses/course/course-list/course-list.component';
 import { ViewCourseComponent } from './modules/admin/courses/course/course-list/view-course/view-course.component';
 import { CourseService } from './services/course.service';
+import { UserCourseComponent } from './modules/user/courses/user-course/user-course.component';
+import { ListUsercourseComponent } from './modules/user/courses/user-course/list-usercourse/list-usercourse.component';
+import { ViewUsercourseComponent } from './modules/user/courses/user-course/list-usercourse/view-usercourse/view-usercourse.component';
 
 
 const routes: Routes = [
@@ -62,6 +65,9 @@ const routes: Routes = [
     CourseComponent,
     CourseListComponent,
     ViewCourseComponent,
+    UserCourseComponent,
+    ListUsercourseComponent,
+    ViewUsercourseComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [

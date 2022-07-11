@@ -8,7 +8,15 @@ export class CourseService {
             courseDuration:"4 years",
             courseTiming:"8:30am to 4:00pm",
             noStudent:200,
-            courseDis:"Computer Science is a dynamic and fast growing area that has become an integral part of our daily lives."
+            courseDis:"Computer Science is a dynamic and fast growing area that has become an integral part of our lives."
+        },
+
+        {
+            courseName:"B.E EEE",
+            courseDuration:"4 years",
+            courseTiming:"8:30am to 4:00pm",
+            noStudent:200,
+            courseDis:"Computer Science is a dynamic and fast growing area that has become an integral part of our lives."
         },
 
         {
@@ -16,15 +24,31 @@ export class CourseService {
             courseDuration:"4 years",
             courseTiming:"8:30am to 4:00pm",
             noStudent:200,
-            courseDis:"Over the last decade, electronics and communication systems have become an integral part of our lives."
+            courseDis:"Computer Science is a dynamic and fast growing area that has become an integral part of our lives."
         },
 
         {
-            courseName:"B.TEC IT",
+            courseName:"B.Tech IT",
             courseDuration:"4 years",
             courseTiming:"8:30am to 4:00pm",
-            noStudent:100,
-            courseDis:"Over the last 25-30 years, we have witnessed extraordinary developments in the field of information technology."
+            noStudent:200,
+            courseDis:"Computer Science is a dynamic and fast growing area that has become an integral part of our lives."
+        },
+
+        {
+            courseName:"B.E CSBS",
+            courseDuration:"4 years",
+            courseTiming:"8:30am to 4:00pm",
+            noStudent:200,
+            courseDis:"Computer Science is a dynamic and fast growing area that has become an integral part of our lives."
+        },
+
+        {
+            courseName:"B.E AIDS",
+            courseDuration:"4 years",
+            courseTiming:"8:30am to 4:00pm",
+            noStudent:200,
+            courseDis:"Computer Science is a dynamic and fast growing area that has become an integral part of our lives."
         },
 
         
