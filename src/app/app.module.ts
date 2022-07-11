@@ -71,11 +71,6 @@ const routes: Routes = [
     ViewCourseComponent,
     InstituteComponent,
     InstituteListComponent,
-    ViewInstituteComponent,
-    InstituteAdminComponent,
-    ListAdminstituteComponent,
-    ViewAdminstituteComponent,
-    SearchbarComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
