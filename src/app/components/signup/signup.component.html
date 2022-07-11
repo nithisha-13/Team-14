@@ -1,52 +1,70 @@
 <div class="bg"></div>
 <mat-card class="card">
-  <mat-card-title class="title ml-2">SIGN UP</mat-card-title>
-  <form class="forms" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-    <select class="custom-select field" formControlName="role">
+  <mat-card-title class="title" style="margin-left:98px">SIGN UP</mat-card-title>
+  <form [formGroup]="registerForm">
+    <select class="custom-select field">
       <option *ngFor="let role of Roles" [ngValue]="role.id">
         {{ role.value }}
       </option>
     </select>
+    <br><br>
+    <div class="row">
+    <div class="col-md-4">  
     <div class="field">
       <input
+        formControlName="username"
         class="input form-control"
         id="name"
+        name="name"
         type="text"
-        formControlName="name"
+        [(ngModel)]="formData.username"
         placeholder="Enter Username"
       />
+      <small *ngIf="!registerForm.get('username').valid && registerForm.get('username').touched" class="text-danger">* Invalid Username</small> 
     </div>
-
+    <br>
     <div class="field">
       <input
+        formControlName="email"
         class="input form-control"
         id="email"
+        name="email"
         type="email"
-        formControlName="email"
+        [(ngModel)]="formData.email"
         placeholder="Enter Email"
       />
+      <small *ngIf="!registerForm.get('email').valid && registerForm.get('email').touched" class="text-danger">* Invalid Email ID</small> 
     </div>
-
-    <div class="field">
+  </div>
+  <div class="col-md-4" style="margin-left: 58px;">
+    <div class="field" >
       <input
+        formControlName="phone"
         class="input form-control"
         id="phone"
+        name="phone"
         type="phone"
-        formControlName="phone"
+        [(ngModel)]="formData.phone"
         placeholder="Enter Phone Number"
       />
+      <small *ngIf="!registerForm.get('phone').valid && registerForm.get('phone').touched" class="text-danger">* Invalid Phone Number</small> 
     </div>
-
+    <br>
     <div class="field">
       <input
+        formControlName="password"
         class="input form-control"
         id="password"
+        name="password"
         type="password"
-        formControlName="password"
+        [(ngModel)]="formData.password"
         placeholder="Enter Password"
       />
+      <small *ngIf="!registerForm.get('password').valid && registerForm.get('password').touched" class="text-danger">* Invalid Password</small> 
     </div>
-
-    <button class="btn btn-info" type="submit">SignUp</button>
+  </div>
+</div>
+<br>
+    <button (click)="signUp()" class="btn btn-info" type="submit" id="submit">SignUp</button>
   </form>
 </mat-card>

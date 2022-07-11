@@ -1,12 +1,12 @@
 .custom-select {
-  width: 230px;
+  width: 487px;
   height: 35px;
   margin-bottom: 15px;
   margin-left: 65px;
 }
 
 .card {
-  width: 400px;
+  width: 600px;
   margin-top: 150px;
   margin-left: 500px;
   position: absolute;
@@ -18,14 +18,17 @@
 .field {
   height: 35px;
   margin-bottom: 15px;
-  margin-left: 68px;
+  margin-left: 45px;
 }
 
 .input {
   height: 35px;
   width: 230px;
 }
-
+#submit{
+  margin-left:230px;
+  width:100px;
+}
 .title {
   padding-left: 130px;
   padding-bottom: 10px;

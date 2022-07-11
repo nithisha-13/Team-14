@@ -35,6 +35,7 @@ import { UserCourseComponent } from './modules/user/courses/user-course/user-cou
 import { ViewUsercourseComponent } from './modules/user/courses/user-course/list-usercourse/view-usercourse/view-usercourse.component';
 import { ListUsercourseComponent } from './modules/user/courses/user-course/list-usercourse/list-usercourse.component';
 
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'page-not-found', component: PageNotFoundComponent },
