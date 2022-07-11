@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Signup } from './signup';
+import { SignupPayload } from './signup.payload';
 
 @Component({
   selector: 'app-signup',
@@ -7,21 +10,47 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-  Roles = [
-    { id: 1, value: 'Admin' },
-    { id: 2, value: 'User' },
-  ];
-  registerForm = this.formBuilder.group({
-    role: [''],
-    name: '',
-    email: '',
-    phone: '',
-    password: '',
-  });
-  constructor(private formBuilder: FormBuilder) {}
+  // Roles = [
+  //   { id: 1, value: 'Admin' },
+  //   { id: 2, value: 'User' },
+  // ];
+  registerForm:FormGroup;
+  signuppayload:SignupPayload;
+  formData:any={};
+  // registerForm = this.formBuilder.group({
+  //   role: [''],
+  //   name: '',
+  //   email: '',
+  //   phone: '',
+  //   password: '',
+  // });
 
-  ngOnInit(): void {}
-  onSubmit(): void {
+  constructor(private formBuilder: FormBuilder,private router:Router) {
+    this.signuppayload={
+      name:'',
+      email:'',
+      phone:'',
+      password:'',
+    } 
+  }
+
+  ngOnInit(): void {
+    this.registerForm = new FormGroup({
+      username : new FormControl('', [Validators.required,Validators.minLength(6),Validators.pattern('^[a-z0-9_-]{8,15}$')]),
+      email : new FormControl('', [Validators.required, Validators.email,Validators.pattern('^([a-zA-Z]+.*?)+@[a-z0-9.-]+\.[a-z]{2,4}$')]),
+      phone : new FormControl('',[Validators.required,Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')]),
+      password : new FormControl('', [Validators.required, Validators.minLength(8),Validators.maxLength(16),Validators.pattern('^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+*!=]).*$')]),
+    });
+  }
+  onSubmit(e){
+    this.signuppayload.name= this.registerForm.get('name').value;
+    this.signuppayload.email= this.registerForm.get('email').value;
+    this.signuppayload.phone= this.registerForm.get('phone').value;
+    this.signuppayload.password= this.registerForm.get('password').value;
     alert('Registered Successfully!');
+    this.router.navigate(["/login"]);
+  }
+  signUp(){
+    console.log(this.formData);
   }
 }

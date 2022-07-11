@@ -12,7 +12,6 @@ import { EnrollCoursePayload } from './enroll-course.payload';
 export class EnrollCourseComponent implements OnInit {
   enrolledform:FormGroup;
   enrolledcoursepayload:EnrollCoursePayload;
-  enrolledcourse1: EnrollCourse;
   formData:any={};
   constructor(private formbuilder:FormBuilder) { 
     this.enrolledcoursepayload={
