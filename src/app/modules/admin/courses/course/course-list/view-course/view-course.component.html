@@ -26,15 +26,18 @@
         </h3>
         <h4 style="text-align: right; float: right">{{ course.noStudent }}</h4>
         <hr style="clear: both" />
-        <h3 style="text-align: left; float: left">
+        <h3 style="text-align: center; float: center">
           <strong>Description : </strong>
         </h3>
         <h4 style="text-align: right; float: right">{{ course.courseDis }}</h4>
         <hr style="clear: both" />
       </div>
       <div>
-        <button class="btn btn-success btn-sm" routerLink="/enrollCourse">
-          Enroll Course
+        <button class="btn btn-success btn-sm edit" routerLink="/edit-course">
+          Edit Course
+        </button>
+        <button class="btn btn-success btn-sm del">
+         Delete Course
         </button>
       </div>
     </div>
