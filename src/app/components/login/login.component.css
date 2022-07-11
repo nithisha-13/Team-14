@@ -1,62 +1,62 @@
 body{
     height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(90deg, #A7B3F1 0.94%, rgba(167, 179, 241, 0.578125) 75.24%, rgba(167, 179, 241, 0.228841) 99.99%, rgba(167, 179, 241, 0) 100%);;
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1513530534585-c7b1394c6d51?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80");
+    background-repeat: no-repeat;
 }
-form{
-    width: 20rem;
-    height:26rem;
-    display: flex;
-    flex-direction: column;
-    background:linear-gradient(180deg, #6F7FBA 0%, rgba(111, 127, 186, 0.44) 33.33%, rgba(111, 127, 186, 0.33) 75%, rgba(111, 127, 186, 0.2) 100%);
-    border-radius: 10px;
-}
-h2{
-    font-size: 30px;
+
+.container {
+    background: linear-gradient(180deg, #aaabaf 0%, rgba(147, 149, 151, 0.44) 33.33%, rgba(94, 94, 96, 0.33) 75%, rgba(51, 52, 53, 0.2) 100%);
+    position: absolute;
+    width: 30%;
+    height: 60%;
+    top: 20%;
+    left: 35%;
+    padding-top: 4%;
+    padding-bottom: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 5px;
+  }
+
+  h2{
     text-align: center;
-    color: white;
-    letter-spacing: 2px;
-    margin-top: 5%;
-    margin-bottom: 15%;
-}
-label{
-    font-size: 20px;
-    color:white;
-    margin-left: 10%;
-}
-input{
+    font-size: 2vw;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+  }
+  input{
+    color: rgb(0, 0, 1);
     width: 80%;
-    margin: 5% auto;
-    margin-bottom: 8%;
-    border: none;
-    outline: none;
-    background: transparent;
-    color:#ffff;
-    border-bottom: 1px solid #ffff;
-}
-button{
-    width: 50%;
-    margin: 3% auto;
-    color: white;
-    font-size: 15px;
-    opacity: .7;
-    background: rgba(255,255,255,0.06);
-    padding: 10px 30px;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    box-shadow: 3px 3px 5px rgba(31, 38, 135, .37);
-}
-p{
-    font-size: 12px;
+    height: 80%;
+    border: 0.5%;
+    border-radius: 5%;
     text-align: center;
+    font-size: 1.3vw;
+  }
+  .form-group {
+    margin-left: 2%;
+    width: 125%;
+    height: 23%;
+    
+  }
+
+  button{
+    height: 1.7rem;
+    width: 32%;
+    border-radius: 5%;
+    background-color: rgb(55, 55, 58);
     color: white;
+    border-color: rgb(208, 202, 202);
+    float: center;
+    margin-left: 35%;
+    margin-bottom: 5%;
+ }
+ p{
+    text-align: center;
+    margin-bottom: 1%;
 }
 a{
-    font-size: 12px;
     text-align: center;
-    color: white;
+    color: #07114d;
 }
